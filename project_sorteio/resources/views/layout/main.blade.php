@@ -45,7 +45,9 @@
 
 
 
-
+        <div class="footer">
+            Criado por: Rafael Victor Boscato
+        </div>
 
     </div>
 
