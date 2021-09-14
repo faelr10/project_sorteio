@@ -2,11 +2,14 @@
     background-color: #f1f1ff;
 }
 
+/*---------------------------------------------------------------------------------------------------------*/
+/*--LAYOUT PRINCIPAL--*/
 .corpo{
-    min-height: 46rem;
+    min-height: 50rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
+    align-items: center;
 }
 
 .menu{
@@ -40,8 +43,13 @@
     height: 100%;
 }
 
+.menuentrar a{
+    text-decoration: none;
+}
+
 #iconperfil{
     font-size: 50px;
+    color: black;
 }
 
 .footer{
@@ -51,4 +59,28 @@
     justify-content: center;
     align-items: center;
     background-color: #d2d1d4;
+}
+
+.msg{
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+.containerformulario{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 40rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerformulario form{
+    width: 50%;
 }
