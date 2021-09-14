@@ -8,7 +8,7 @@
         <h1>Criar Rifa</h1>
     </div>
 
-    <form method="POST" action="/sorteio">
+    <form method="POST" action="{{URL::asset('/sorteio')}}">
     @csrf
 
         <div class="mb-3">
