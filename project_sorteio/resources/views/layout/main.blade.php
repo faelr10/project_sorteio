@@ -53,16 +53,18 @@
         <p class="msg">{{ session('msg') }}</p>
         @endif
 
+        
 
         @yield('content')
 
-
-
-    </div>
-
-    <div class="footer">
+        <div class="footer">
         Criado por: Rafael Victor Boscato
     </div>
+
+
+    </div>
+    
+
 
 </body>
 

@@ -18,4 +18,6 @@ Route::get('/',[SorteioController::class,'index']);
 
 Route::get('sorteio/create',[SorteioController::class,'create']);
 Route::post('/sorteio',[SorteioController::class,'store']);
+Route::get('/perfil',[SorteioController::class,'perfil']);
+
 

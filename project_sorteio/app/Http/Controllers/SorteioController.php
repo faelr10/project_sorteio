@@ -27,4 +27,8 @@ class SorteioController extends Controller
 
         return redirect('/')->with('msg', 'Rifa Criada com Sucesso');;
     }
+
+    public function perfil(){
+        return view('perfil');
+    }
 }
