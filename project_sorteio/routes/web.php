@@ -19,5 +19,8 @@ Route::get('/',[SorteioController::class,'index']);
 Route::get('sorteio/create',[SorteioController::class,'create']);
 Route::post('/sorteio',[SorteioController::class,'store']);
 Route::get('/perfil',[SorteioController::class,'perfil']);
+Route::get('/dashboard',[SorteioController::class,'dashboard'])->name('dashboard');
+Route::get('/comprarrifa/{id}',[SorteioController::class,'show']);
+
 
 

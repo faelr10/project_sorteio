@@ -2,6 +2,14 @@
 
 @section('content')
 
-    @include('layout.dashboard')
+<div class="card5">
+    <div class="imgbx">
+        <img src="img/iphone.png" alt="">
+    </div>
+    
+    </div>
+</div>
+
+
 
 @endsection

@@ -27,11 +27,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
+    <script src="{{URL::asset('js/script.js')}}"></script>
+
 </head>
+
 
 <body>
 
     <div class="corpo">
+
+        <!------------------------------------------------------------------------------------------------------------------->
+        <!------------------------------------------------------------------------------------------------------------------->
+        <!--MENU-->
 
         <div class="menu">
 
@@ -42,29 +49,55 @@
             </div>
 
             <div class="menuentrar">
-                <a href="">
-                    <ion-icon id="iconperfil" name="person-circle-outline"></ion-icon>
-                </a>
-            </div>
 
+                <div class="menuperfilprincipal">
+
+                    <a href="{{URL::asset('dashboard')}}">
+                        <ion-icon id="iconperfil" name="person-circle-outline"></ion-icon>
+                    </a>
+
+                    <div class="submenuperfilprincipal">
+                        <a href="{{URL::asset('dashboard')}}">Meu Perfil</a>
+                        <a href="{{URL::asset('dashboard')}}">Minhas Rifas</a>
+                        <a href="{{URL::asset('dashboard')}}">Carteira</a>
+                        <a href="{{URL::asset('dashboard')}}">Sair</a>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        @if(session('msg'))
-        <p class="msg">{{ session('msg') }}</p>
-        @endif
 
-        
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!--FLASH-MESSAGE-->
 
-        @yield('content')
-
-        <div class="footer">
-        Criado por: Rafael Victor Boscato
-    </div>
+            @if(session('msg'))
+            <p class="msg">{{ session('msg') }}</p>
+            @endif
 
 
-    </div>
-    
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!--CONTEÚDO-->
 
+            @yield('content')
+
+
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!--FOOTER-->
+
+            <div class="footer">
+                Criado por: Rafael Victor Boscato
+            </div>
+
+
+            <!------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------->
+
+        </div>
 
 </body>
 
