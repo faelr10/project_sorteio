@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -13,6 +14,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        User::create([
+            'name'=>'Carlos Ferreira',
+            'email'=>'carlos@hotmail.com',
+            'password'=>bcrypt('123456')
+        ]);
     }
 }
