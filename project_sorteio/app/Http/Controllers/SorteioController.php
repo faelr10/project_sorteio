@@ -78,8 +78,9 @@ class SorteioController extends Controller
     {
         $resultados = Sorteio::findOrFail($id);
         $i = 0;
+        $quantidade = $resultados->quantidade;
 
-        return view('comprarrifa', ['i'=>$i,'resultados' => $resultados]);
+        return view('comprarrifa', ['i'=>$i,'resultados' => $resultados,'quantidade'=>$quantidade]);
     }
 
 }

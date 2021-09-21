@@ -27,7 +27,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-    <script src="{{URL::asset('js/script.js')}}"></script>
+    
 
 </head>
 
@@ -54,6 +54,7 @@
 
                 <div class="menuperfilprincipal">
 
+                    
                     <a href="{{URL::asset('dashboard')}}">
                         <ion-icon id="iconperfil" name="person-circle-outline"></ion-icon>
                     </a>
@@ -63,7 +64,7 @@
                         <a href="{{URL::asset('dashboard')}}">Minhas Rifas</a>
                         <a href="{{URL::asset('dashboard')}}">Carteira</a>
                         <a href="{{route('logout')}}">Sair</a>
-                        </form>
+
                     </div>
 
 
@@ -72,7 +73,7 @@
                 @endauth
 
                 @guest
-                <div class="menuperfilprincipal">
+                <div class="menuperfilprincipaloff">
 
                     <a href="{{route('cadastro')}}">
                         Cadastrar
@@ -123,5 +124,7 @@
     </div>
 
 </body>
+
+<script src="{{URL::asset('js/script.js')}}"></script>
 
 </html>

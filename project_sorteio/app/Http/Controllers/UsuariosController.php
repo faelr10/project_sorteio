@@ -17,6 +17,7 @@ class UsuariosController extends Controller
 
         $dados = $request->all();
         $dados['senha'] = bcrypt($dados['senha']);
+        
         Usuario::create($dados);
 
         return redirect('/')->with('msg', 'Rifa Criada com Sucesso');
@@ -31,8 +32,7 @@ class UsuariosController extends Controller
     {
         $dados = $request->all();
 
-        $email = $dados['email'];
-        $login = $dados['email'];
+        $login = $dados['login'];
         $senha = $dados['senha'];
 
         $usuario = Usuario::where('login', $login)->first();

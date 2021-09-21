@@ -37,14 +37,18 @@
     <!------------------------------------------------------------------------------------------------------------------->
     <!--RESULTADOS-->
 
+    
+
     <div class="resultados">
+
+    <h1>Seja bem-vindo(a) {{ Auth::user()->nome }}!</h1>
 
     @foreach($resultados as $resultados)
         <div class="carddash">
             <div class="cardtopicos">
                 <h1>{{$resultados->nome}}</h1>
                 <h2 class="numeros">{{$resultados->quantidade}}</h2>
-                <a href="" class="valor">Valor arrecadado: R$ 205</a>
+                <a href="{{route('comprarrifa',$resultados->id)}}" class="valor">Valor arrecadado: R$ 205</a>
             </div>
         </div>
     @endforeach

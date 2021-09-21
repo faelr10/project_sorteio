@@ -1,26 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Login</h1>
+@extends('layout.main')
 
-    <form action="{{route('logar')}}" method="POST">
-    {{ csrf_field() }}
+@section('content')
 
-        <label for="">E-mail</label>
-        <input name="email" type="text">
+<div class="formulariologin">
 
-        <label for="">Senha</label>
-        <input name="senha" type="password">
+<h1>Login</h1>
 
-        <button type="input">Entrar</button>
+    <form method="post" action="{{route('logar')}}" >
+        @csrf
+        <div class="mb-3">
 
+            <label for="exampleInputEmail1" class="form-label">Login</label>
+            <input type="text" class="form-control" name="login" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" name="senha" id="exampleInputPassword1">
+
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
-
-</body>
-</html>
+</div>
+@endsection

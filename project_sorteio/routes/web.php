@@ -22,7 +22,7 @@ Route::get('sorteio/create',[SorteioController::class,'create'])->name('create')
 Route::post('/sorteio',[SorteioController::class,'store']);
 Route::get('/perfil',[SorteioController::class,'perfil']);
 Route::get('/dashboard',[SorteioController::class,'dashboard'])->name('dashboard')->middleware('auth');
-Route::get('/comprarrifa/{id}',[SorteioController::class,'show']);
+Route::get('/comprarrifa/{id}',[SorteioController::class,'show'])->name('comprarrifa');
 
 Route::get('/cadastro',[UsuariosController::class,'cadastro'])->name('cadastro');
 Route::post('/cadastrar',[UsuariosController::class,'store'])->name('cadastrar');

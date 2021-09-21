@@ -1,38 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section('content')
 
-<body>
-    <h1>Cadastro</h1>
+<div class="formulariocadastro">
 
-    <form action="{{route('cadastrar')}}" method="POST">
-    {{ csrf_field() }}
+<h1>Cadastrar</h1>
 
-        <label for="">Nome</label>
-        <input name="nome" type="text">
+    <form method="post" action="{{route('cadastrar')}}" >
+        @csrf
 
-        <label for="">CPF</label>
-        <input name="cpf" type="text">
+        <div class="mb-3">
 
-        <label for="">E-mail</label>
-        <input name="email" type="email">
+            <label for="exampleInputEmail1" class="form-label">Nome</label>
+            <input type="text" class="form-control" name="nome" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
-        <label for="">Nome de usuário</label>
-        <input name="login" type="text">
+        </div>
 
-        <label for="">Senha</label>
-        <input name="senha" type="password">
+        <div class="mb-3">
 
-        <button type="input">Cadastrar</button>
+            <label for="exampleInputEmail1" class="form-label">CPF</label>
+            <input type="text" class="form-control" name="cpf" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
+        </div>
+
+        <div class="mb-3">
+
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+
+        </div>
+
+
+        <div class="mb-3">
+
+            <label for="exampleInputEmail1" class="form-label">Login</label>
+            <input type="text" class="form-control" name="login" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" name="senha" id="exampleInputPassword1" required>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
     </form>
-
-</body>
-
-</html>
+</div>
+@endsection
