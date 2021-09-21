@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sorteio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SorteioController extends Controller
 {
@@ -49,6 +50,8 @@ class SorteioController extends Controller
         $sorteio->quantidade = $request->quantidade;
         $sorteio->valor = $valor;
         $sorteio->porcentagem = $porcentagem;
+        $sorteio->id_usuarios = Auth::user()->id;
+        
 
         $sorteio->save();
 
@@ -62,7 +65,12 @@ class SorteioController extends Controller
 
     public function dashboard()
     {
-        $resultados = Sorteio::all();
+        
+
+        $user = auth()->user();
+        $resultados = $user->sorteio;
+
+
         return view('dashboard', ['resultados' => $resultados]);
     }
 

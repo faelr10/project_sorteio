@@ -62,10 +62,7 @@
                         <a href="{{URL::asset('dashboard')}}">Meu Perfil</a>
                         <a href="{{URL::asset('dashboard')}}">Minhas Rifas</a>
                         <a href="{{URL::asset('dashboard')}}">Carteira</a>
-                        <form action="/logou" method="post">
-                            @csrf
-                            <a href="/logout" onclick="event.preventDefault();
-                        this.closest('form').submit();">Sair</a>
+                        <a href="{{route('logout')}}">Sair</a>
                         </form>
                     </div>
 
@@ -77,11 +74,11 @@
                 @guest
                 <div class="menuperfilprincipal">
 
-                    <a href="/">
+                    <a href="{{route('cadastro')}}">
                         Cadastrar
                     </a>
 
-                    <a href="/">
+                    <a href="{{route ('login')}}">
                         Entrar
                     </a>
 
